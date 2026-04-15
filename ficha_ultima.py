@@ -1,5 +1,5 @@
-
-
+#Versão atual e supostamente funcional da ficha
+#Ainda não está 
 forca = 0
 agilidade = 0
 vigor = 0
@@ -148,4 +148,4 @@ def Ficha():
     print(f"Pontos de Vida: {pv}", "	", f"Pontos de Mana: {pm}")
     return ""
 i = Ficha()
-print(i)
+print(i)_

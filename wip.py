@@ -101,19 +101,19 @@ class ficha:
             arquetipo = [1, 3]
         return arquetipo, recomendacao
     
-def set_nivel(self):
-    while True:
-        nivel = input("Qual o nível do seu personagem? ")
-        try:
-            e_numero = int(nivel)
-            nivel = int(nivel)
-            if nivel < 1 or nivel > 20:
-                print("Insira um valor inteiro entre 1 e 20")
-            else:
-                break
-        except ValueError:
-            e_numero = 0
-            print("Insira um valor inteiro entre 1 e 20")     
+    def set_nivel(self):
+        while True:
+            nivel = input("Qual o nível do seu personagem? ")
+            try:
+                e_numero = int(nivel)
+                nivel = int(nivel)
+                if nivel < 1 or nivel > 20:
+                    print("Insira um valor inteiro entre 1 e 20")
+                else:
+                    break
+            except ValueError:
+                e_numero = 0
+                print("Insira um valor inteiro entre 1 e 20")     
 
     def seilameumuitacoisatlg
 pontos_de_atributo = 12 + nivel
