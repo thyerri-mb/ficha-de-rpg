@@ -134,7 +134,7 @@ def Ficha():
     print(f"Destreza: {De}", "	", f"Inteligência: {In}")
     print(f"Sabedoria: {Sa}", "	", f"Carisma: {Ca}")
     print("")
+    print(f"Pontos de Vida: {pv}", "	", f"Pontos de Mana: {pm}")
     return ""
 i = Ficha()
 print(i)
-print(f"Pontos de Vida: {pv}", "	", f"Pontos de Mana: {pm}")
