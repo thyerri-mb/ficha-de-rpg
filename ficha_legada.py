@@ -1,3 +1,5 @@
+#Versão mais antiga salva da primeira ficha que fiz
+#Ainda tem algumas alterações recentes antes de eu decidir separar as duas para poder visualizar melhor meu progresso
 while True:
     nome = input("Qual o nome do seu personagem? ")
     try:
