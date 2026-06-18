@@ -1,3 +1,5 @@
+
+
 forca = 0
 agilidade = 0
 vigor = 0
@@ -9,7 +11,7 @@ while True:
         e_numero = int(nome)
     except ValueError:
         e_numero = 0
-        if nome != "" and len(nome) >= 3:
+        if nome != "" and len(nome) >= 3 and nome.isalnum():
             nome = nome.capitalize()
             break
 while True:
@@ -43,12 +45,13 @@ m = bonus_de_raca(raca)
 print(m[0])
 
 while True:
+    print("Dentre guerreiro, ladino ou mago")
     classe = input("Qual a classe do seu personagem? ")
     try:
         e_numero = int(classe)
     except ValueError:
         e_numero = 0
-        classe = classe.capitalize()
+        classe = classe.capitalize() #tá faltando aqui bardo, feiticeiro, bruxo, artifice... sla tá faltando
         if classe in ["Bárbaro", "Guerreiro", "Paladino", "Monge", "Caçador", "Ladino", "Acólito", "Místico", "Druida", "Mago", "Clérigo", "Psiônico"]:
             break
 def coisas_de_classe(classe):
@@ -117,6 +120,7 @@ while atributinhos < 5:
                 print("Você já excedeu seus pontos! Tente novamente")
                 atributinhos = 0
                 valor_acola = pontos_de_atributo
+                valores.clear()
                 break
     except ValueError:
         e_numero = 1
