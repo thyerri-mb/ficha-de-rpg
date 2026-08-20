@@ -1,5 +1,11 @@
-#Versão atual e supostamente funcional da ficha
-#Ainda não está 
+#Depois de muito tempo sem mexer nisso aqui, eu estou decepcionado com esse projeto, era mais organizado na minha cabeça
+import time
+def pausa():
+    time.sleep(0.3)
+    print(".")
+    time.sleep(0.5)
+print("Iniciando criação de personagem")
+p = pausa()
 forca = 0
 agilidade = 0
 vigor = 0
@@ -14,6 +20,7 @@ while True:
         if nome != "" and len(nome) >= 3 and nome.isalnum():
             nome = nome.capitalize()
             break
+p = pausa()
 while True:
     print("Dentre humano, elfo, anão, goblin e ogro")
     raca = input("Qual a raça do seu personagem? ")
@@ -23,7 +30,8 @@ while True:
         e_numero = 0
         raca = raca.capitalize()
         if raca in ["Humano", "Elfo", "Anão", "Goblin", "Ogro"]:
-            break   
+            break
+p = pausa()
 def bonus_de_raca(raca):
     if raca == "Humano":
         mensagem = "Por ser um humano, você terá 1 ponto a mais de carisma"
@@ -43,7 +51,7 @@ def bonus_de_raca(raca):
     return mensagem, bonus
 m = bonus_de_raca(raca)
 print(m[0])
-
+p = pausa()
 while True:
     print("Dentre guerreiro, ladino ou mago")
     classe = input("Qual a classe do seu personagem? ")
@@ -54,6 +62,7 @@ while True:
         classe = classe.capitalize() #tá faltando aqui bardo, feiticeiro, bruxo, artifice... sla tá faltando
         if classe in ["Bárbaro", "Guerreiro", "Paladino", "Monge", "Caçador", "Ladino", "Acólito", "Místico", "Druida", "Mago", "Clérigo", "Psiônico"]:
             break
+p = pausa()
 def coisas_de_classe(classe):
     if classe in ["Bárbaro", "Guerreiro", "Paladino", "Monge"]:
         arquetipo = [3, 1]
@@ -78,7 +87,7 @@ while True:
     except ValueError:
         e_numero = 0
         print("Insira um valor inteiro entre 1 e 20")     
-
+p = pausa()
 pontos_de_atributo = 12 + nivel
 
 atributos = ["Força: ","Agilidade: ","Vigor: ","Intelecto: ","Carisma: "]
@@ -88,7 +97,7 @@ identificacao = coisas_de_classe(classe)
 
 print(f"Distribua {pontos_de_atributo} pontos entre os atributos:")
 print("Força, Vigor, Agilidade, Intelecto e Carisma")
-print("")
+p = pausa()
 print(f"Por ser um {classe}, priorize colocar mais pontos em {identificacao[1]}")
 print(f"Cada atributo deve ter pelo menos 1 ponto e nenhum deles deve exceder mais que {valor_maximo}")
 print("")
@@ -134,7 +143,8 @@ boost = identificacao[0]
 utopico = boost[0]
 pv = (10 + nivel * utopico)
 pm = (2 + nivel * utopico)
-
+print("Gerando ficha")
+p = pausa()
 def Ficha():
     print("")
     print("== Ficha de Personagem ==")
@@ -143,9 +153,9 @@ def Ficha():
     print(f"Raça: {raca}", "	", f"Classe: {classe}")
     print("")
     for chave, valor in atributos1.items():
-        print(f"{chave}: {valor}")
+        print(f"{chave}{valor}")
     print("")
     print(f"Pontos de Vida: {pv}", "	", f"Pontos de Mana: {pm}")
     return ""
 i = Ficha()
-print(i)_
+print(i)
